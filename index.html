@@ -9,48 +9,810 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet" />
-    <!-- tailwind -->
+    <!-- TailWind & DaisyUI Linkup -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Summer Sale</title>
+
+    <!-- Custom Tailwind  -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              'title-color': '#111111',
-              'btn-color': '#E527B2'
+              "title-color": "#111111",
+              "btn-color": "#E527B2",
+              "rating-star": "#FFC107",
+
             },
           },
         },
       };
     </script>
     <!-- Custom Css -->
-    <style></style>
+    <style>
+      #couponApply {
+        border-radius: 0 8px 8px 0;
+        /* color: #fdf2f8; */
+      }
+    </style>
+    <title>Summer Sale</title>
   </head>
   <body class="font-['Work_Sans',sans-serif]">
     <!-- Header -->
     <header class="min-h-screen flex justify-center items-center bg-[#F9F6E2]">
       <!-- Banner Section -->
-      <section class="container mx-auto md:flex gap-4
-       items-center pt-8 md:p-0">
-          <!--Banner text content -->
-          <div class="text-center px-2 mb-3 md:w-1/2">
-            <h3 class="text-title-color text-2xl sm:text-[32px] font-medium mb-5 md:mb-11">---SALE FEVER---</h3>
-            <h1 class="text-title-color font-bold text-[40px] lg:text-[50px] xl:text-[60px] leading-tight mb-6 lg:mb-16">
-              Purchase TK 200 or<br class="hidden lg:block
-              "> above & get <span class="text-btn-color">20% off</span>
-            </h1>
-            <div class="text-2xl space-y-2 lg:flex items-center justify-center">
-              <p class="font-medium">Use Promo Code</p>
-              <div class="font-semibold px-[25px] py-[14px] bg-btn-color rounded-lg text-white max-w-[160px] mx-auto lg:mx-0 lg:ml-3">SELL200</div>
+      <section class="container mx-auto md:flex gap-4 items-center pt-8 md:p-0">
+        <!--Banner text content -->
+        <div class="text-center px-2 mb-3 md:w-1/2">
+          <h3
+            class="text-title-color text-2xl sm:text-[32px] font-medium mb-5 md:mb-11">
+            ---SALE FEVER---
+          </h3>
+          <h1
+            class="text-title-color font-bold text-[40px] lg:text-[50px] xl:text-[60px] leading-tight mb-6 lg:mb-16">
+            Purchase TK 200 or<br class="hidden lg:block" />
+            above & get <span class="text-btn-color">20% off</span>
+          </h1>
+          <div class="text-2xl space-y-2 lg:flex items-center justify-center">
+            <p class="font-medium">Use Promo Code</p>
+            <div
+              class="font-semibold px-[25px] py-[14px] bg-btn-color rounded-lg text-white max-w-[160px] mx-auto lg:mx-0 lg:ml-3">
+              SELL200
             </div>
           </div>
-          <!-- banner Image -->
-          <figure class="md:w-1/2">
-            <img class="w-[90%] md:w-full mx-auto" src="./images/Summer 1.png" alt="summerSale" />
-          </figure>
+        </div>
+        <!-- banner Image -->
+        <figure class="md:w-1/2">
+          <img
+            class="w-[90%] md:w-full mx-auto"
+            src="./images/Summer_banner_image.png"
+            alt="summerSale" />
+        </figure>
       </section>
     </header>
+    <!-- Main Section -->
+    <main class="bg-[#F8F8F8]">
+      <section class="container mx-auto pt-10 md:pt-14 lg:pt-[100px] lg:px-4">
+        <!-- KitchenWear Section Title -->
+        <h1
+          class="text-title-color text-4xl font-semibold mb-5 md:mb-8 hidden lg:block">
+          Kitchenware
+        </h1>
+        <!-- KitchenWear Section Title end-->
+        <!-- Product cetagory & Pricing section -->
+        <div class="lg:grid grid-cols-4 gap-5">
+          <!-- Coupon, Added cart item , Price & Make Purchase-->
+          <div class="max-w-[450px] mx-auto lg:mx-0 lg:order-2 px-4 lg:px-0">
+            <!-- Coupon apply section -->
+            <div
+              class="p-8 lg:px-3 xl:px-8 bg-white rounded-lg shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] mb-6">
+              <h3 class="text-title-color text-2xl mb-4">Have coupon?</h3>
+              <!-- input Coupon -->
+              <div class="relative flex">
+                <input
+                  id="couponCode"
+                  class="max-w-[295px] flex-1 h-14 rounded-lg pl-4 border border-[1px_solid_rgba(17,17,17,0.15)] outline-btn-color"
+                  type="text"
+                  placeholder="Coupon code" />
+                <button
+                  id="couponApply"
+                  class="btn btn-secondary normal-case h-14 bg-btn-color text-white text-xl font-semibold absolute right-0 lg:-right-1 xl:right-0">
+                  Apply
+                </button>
+              </div>
+            </div>
+            <!-- cart Items & priching -->
+            <div
+              class="bg-white rounded-lg shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] mb-14">
+              <!-- Added cart items -->
+              <div
+                class="text-2xl font-semibold leading-loose text-title-color pt-2 pl-8">
+                <p>1. Home Cooker</p>
+                <p>2. Home Cooker</p>
+                <p>3. Home Cooker</p>
+              </div>
+              <hr
+                class="my-2 border border-[1px_solid_rgba(17,17,17,0.15)] w-[90%] mx-auto" />
+              <!-- Total Price discount price -->
+              <div class="pl-8">
+                <div
+                  class="text-2xl font-semibold leading-loose text-title-color">
+                  Total Price:
+                  <span class="text-[rgba(17,17,17,0.15)]">
+                    <span id="totalPrice">257.00</span> TK
+                  </span>
+                </div>
+                <div
+                  class="text-2xl font-semibold leading-loose text-title-color">
+                  Discount:
+                  <span class="text-[rgba(17,17,17,0.15)]">
+                    <span id="discountPrice">51.00</span> TK
+                  </span>
+                </div>
+                <div
+                  class="text-2xl font-semibold leading-loose text-title-color">
+                  Total:
+                  <span class="text-[rgba(17,17,17,0.15)]">
+                    <span id="finalTotal">257.00</span> TK
+                  </span>
+                </div>
+              </div>
+              <hr
+                class="my-2 border border-[1px_solid_rgba(17,17,17,0.15)] w-[90%] mx-auto" />
+              <button
+                class="btn btn-secondary normal-case h-14 bg-btn-color text-white text-xl font-semibold px-[22px] relative rounded-lg w-[90%] left-[5%] top-[25px]">
+                Make Purchase
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Item ShowCase section -->
+          <div class="lg:col-span-3">
+            <!-- kitchen wear section -->
+            <div class="mb-14 px-5 lg:px-0">
+              <h1
+                class="text-title-color text-4xl font-semibold mb-5 md:mb-8 lg:hidden">
+                Kitchenware
+              </h1>
+              <!--Kitchenware items -->
+              <div
+                class="space-y-6 sm:space-y-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5"> 
+                <!-- Kitchenware Item 1 -->
+                <div
+                  class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] cursor-pointer  hover:bg-[#fdf2f876]">
+                  <figure
+                    class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
+                    <img
+                      class="py-8 mx-auto"
+                      src="./images/kitchen_item1.png"
+                      alt="" />
+                  </figure>
+                  <!--Product Ratings -->
+                  <div class="mt-6 w-max mx-auto">
+                    <div id="ratings_1" class="rating rating-md rating-half">
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="rating-hidden" />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-1"
+                        checked />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-1"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                    </div>
+                  </div>
+                  <!-- Product Name -->
+                  <h3 class="my-3 text-xl font-semibold text-center">
+                    K. Accessories
+                  </h3>
+                  <!-- Product Price -->
+                  <p class="text-xl text-[rgba(17,17,17,0.5)] text-center">
+                    <span>39.00</span> TK
+                  </p>
+                </div>
+                <!-- Kitchenware Item 2 -->
+                <div
+                  class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] cursor-pointer hover:bg-[#fdf2f876]">
+                  <figure
+                    class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
+                    <img
+                      class="py-8 mx-auto"
+                      src="./images/kitchen_item2.png"
+                      alt="" />
+                  </figure>
+                  <!--Product Ratings -->
+                  <div class="mt-6 w-max mx-auto">
+                    <div id="ratings_2" class="rating rating-md rating-half">
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="rating-hidden" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-1"
+                        checked />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                    </div>
+                  </div>
+                  <!-- Product Name -->
+                  <h3 class="my-3 text-xl font-semibold text-center">
+                    K. Accessories
+                  </h3>
+                  <!-- Product Price -->
+                  <p class="text-xl text-[rgba(17,17,17,0.5)] text-center">
+                    <span>25.00</span> TK
+                  </p>
+                </div>
+                <!-- Kitchenware Item 3 -->
+                <div
+                  class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] cursor-pointer hover:bg-[#fdf2f876]">
+                  <figure
+                    class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
+                    <img
+                      class="py-8 mx-auto"
+                      src="./images/kitchen_item3.png"
+                      alt="" />
+                  </figure>
+                  <!--Product Ratings -->
+                  <div class="mt-6 w-max mx-auto">
+                    <div id="ratings_3" class="rating rating-md rating-half">
+                      <input
+                        type="radio"
+                        name="rating-3"
+                        class="rating-hidden" />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-1"
+                        checked />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-3 "
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                    </div>
+                  </div>
+                  <!-- Product Name -->
+                  <h3 class="my-3 text-xl font-semibold text-center">
+                    Home Cooker
+                  </h3>
+                  <!-- Product Price -->
+                  <p class="text-xl text-[rgba(17,17,17,0.5)] text-center">
+                    <span>49.00</span> TK
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- SportsWear Section -->
+            <div class="mb-14 px-5 lg:px-0">
+              <h1
+                class="text-title-color text-4xl font-semibold mb-5 md:mb-8 ">
+                SportsWear
+              </h1>
+              <!--SportsWear items -->
+              <div
+                class="space-y-6 sm:space-y-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <!-- SportsWear Item 1 -->
+                <div
+                  class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] cursor-pointer hover:bg-[#fdf2f876]">
+                  <figure
+                    class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
+                    <img
+                      class="py-8 mx-auto"
+                      src="./images/sports_item1.png"
+                      alt="" />
+                  </figure>
+                  <!--Product Ratings -->
+                  <div class="mt-6 w-max mx-auto">
+                    <div id="ratings_4" class="rating rating-md rating-half">
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="rating-hidden" />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-1"
+                        checked />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-4"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                    </div>
+                  </div>
+                  <!-- Product Name -->
+                  <h3 class="my-3 text-xl font-semibold text-center">
+                    Sports Back Cap
+                  </h3>
+                  <!-- Product Price -->
+                  <p class="text-xl text-[rgba(17,17,17,0.5)] text-center">
+                    <span>49.00</span> TK
+                  </p>
+                </div>
+                <!-- SportsWear Item 2 -->
+                <div
+                  class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] cursor-pointer hover:bg-[#fdf2f876]">
+                  <figure
+                    class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
+                    <img
+                      class="py-8 mx-auto"
+                      src="./images/sports_item2.png"
+                      alt="" />
+                  </figure>
+                  <!--Product Ratings -->
+                  <div class="mt-6 w-max mx-auto">
+                    <div id="ratings_5" class="rating rating-md rating-half">
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="rating-hidden" />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-1"
+                        checked />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-5"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                    </div>
+                  </div>
+                  <!-- Product Name -->
+                  <h3 class="my-3 text-xl font-semibold text-center">
+                    K. Accessories
+                  </h3>
+                  <!-- Product Price -->
+                  <p class="text-xl text-[rgba(17,17,17,0.5)] text-center">
+                    <span>69.00</span> TK
+                  </p>
+                </div>
+                <!-- SportsWear Item 3 -->
+                <div
+                  class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] cursor-pointer hover:bg-[#fdf2f876]">
+                  <figure
+                    class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
+                    <img
+                      class="py-8 mx-auto"
+                      src="./images/sports_item3.png"
+                      alt="" />
+                  </figure>
+                  <!--Product Ratings -->
+                  <div class="mt-6 w-max mx-auto">
+                    <div id="ratings_6" class="rating rating-md rating-half">
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="rating-hidden" />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-1"
+                        checked />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                    </div>
+                  </div>
+                  <!-- Product Name -->
+                  <h3 class="my-3 text-xl font-semibold text-center">
+                    Sports cates
+                  </h3>
+                  <!-- Product Price -->
+                  <p class="text-xl text-[rgba(17,17,17,0.5)] text-center">
+                    <span>159.00</span> TK
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Furniture section -->
+            <div class="mb-14 px-5 lg:px-0">
+              <h1
+                class="text-title-color text-4xl font-semibold mb-5 md:mb-8 ">
+                Furniture
+              </h1>
+              <!--Furniture items -->
+              <div
+                class="space-y-6 sm:space-y-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <!-- Furniture Item 1 -->
+                <div
+                  class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] cursor-pointer hover:bg-[#fdf2f876]">
+                  <figure
+                    class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
+                    <img
+                      class="py-8 mx-auto"
+                      src="./images/furniture_item1.png"
+                      alt="" />
+                  </figure>
+                  <!--Product Ratings -->
+                  <div class="mt-6 w-max mx-auto">
+                    <div id="ratings_7" class="rating rating-md rating-half">
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="rating-hidden" />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-1"
+                        checked />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-7"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                    </div>
+                  </div>
+                  <!-- Product Name -->
+                  <h3 class="my-3 text-xl font-semibold text-center">
+                    Single Relax Chair
+                  </h3>
+                  <!-- Product Price -->
+                  <p class="text-xl text-[rgba(17,17,17,0.5)] text-center">
+                    <span>185.00</span> TK
+                  </p>
+                </div>
+                <!-- Furniture Item 2 -->
+                <div
+                  class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] cursor-pointer hover:bg-[#fdf2f876]">
+                  <figure
+                    class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
+                    <img
+                      class="py-8 mx-auto"
+                      src="./images/furniture_item2.png"
+                      alt="" />
+                  </figure>
+                  <!--Product Ratings -->
+                  <div class="mt-6 w-max mx-auto">
+                    <div id="ratings_8" class="rating rating-md rating-half">
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="rating-hidden" />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-1"
+                        checked />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-8"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                    </div>
+                  </div>
+                  <!-- Product Name -->
+                  <h3 class="my-3 text-xl font-semibold text-center">
+                    Children play
+                  </h3>
+                  <!-- Product Price -->
+                  <p class="text-xl text-[rgba(17,17,17,0.5)] text-center">
+                    <span>299.00</span> TK
+                  </p>
+                </div>
+                <!-- Furniture Item 3 -->
+                <div
+                  class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] cursor-pointer hover:bg-[#fdf2f876]">
+                  <figure
+                    class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
+                    <img
+                      class="py-8 mx-auto"
+                      src="./images/furniture_item3.png"
+                      alt="" />
+                  </figure>
+                  <!--Product Ratings -->
+                  <div class="mt-6 w-max mx-auto">
+                    <div id="ratings_9" class="rating rating-md rating-half">
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="rating-hidden" />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-1"
+                        checked />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-1" />
+                      <input
+                        type="radio"
+                        name="rating-9"
+                        class="bg-rating-star mask mask-star-2 mask-half-2 mr-2" />
+                    </div>
+                  </div>
+                  <!-- Product Name -->
+                  <h3 class="my-3 text-xl font-semibold text-center">
+                    Home Cooker
+                  </h3>
+                  <!-- Product Price -->
+                  <p class="text-xl text-[rgba(17,17,17,0.5)] text-center">
+                    <span>399.00</span> TK
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- modal -->
+    <div>
+      
+    </div>
     <!-- Script Files -->
     <script src="./Js/utilities.js"></script>
     <script src="./Js/summerSale.js"></script>

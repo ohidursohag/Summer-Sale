@@ -29,5 +29,3 @@ function clearValue(id) {
    getElement.innerText = '0.00';
 }
 
-
-

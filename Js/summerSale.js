@@ -7,15 +7,26 @@ function cardItemClick(target) {
    getTotal += Number(getProductPrice);
    displayValue('totalPrice', getTotal);
    displayValue('finalTotal', getTotal);
+
+   // Enabel coupun apply button if total price is more than or equal to 200 tk
    if (getTotal >= 200) {
       btnCouponApply.disabled = false; 
       couponCode.disabled = false; 
    }
+   // Enable the make purchese button at least one item added to the cart
    if (getTotal > 0) {
       bntPurchase.disabled = false; 
    }
+   // item added to cart confirmation popup
    confirmationPopup('addeditemPopup');
-   clearValue('discountPrice');
+   
+   /* When user once Apply the coupon code then agin add items to the cart discount amount & to Pay price automatic update according to new total price */
+   if (Number(document.getElementById('discountPrice').innerText) > 0) {
+      const discount = getTotal * 0.2;
+      displayValue('discountPrice', discount);
+      const finalTotalPrice = getTotal - discount;
+      displayValue('finalTotal', finalTotalPrice);
+   }
 }
 
 //Get and Apply discount

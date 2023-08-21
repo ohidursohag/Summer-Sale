@@ -68,57 +68,57 @@
   </header>
   <!-- Main Section -->
   <main class="bg-[#F8F8F8]">
-    <section class="container mx-auto pt-10 md:pt-14 lg:pt-[100px] lg:px-4">
+    <section class="container mx-auto pt-14 lg:pt-[100px] px-4">
       <!-- KitchenWear Section Title for lg device-->
-      <h1 class="text-title-color text-4xl font-semibold mb-5 md:mb-8 hidden lg:block">
+      <h1 class="text-title-color text-4xl font-semibold mb-5 md:mb-8 hidden sm:block ">
         Kitchenware
       </h1>
 
       <!-- Product cetagory & Pricing section -->
-      <div class="lg:grid grid-cols-4 gap-5">
+      <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
 
         <!-- Coupon, Added cart item , Price & Make Purchase-->
-        <div class="max-w-[450px] mx-auto lg:mx-0 lg:order-2 px-4 lg:px-0">
+        <div class="max-w-[350px] mx-auto sm:mx-0 sm:order-2  h-max sm:sticky top-2 ">
           <!-- Coupon apply section -->
-          <div class="p-8 lg:px-3 xl:px-8 bg-white rounded-lg shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] mb-6">
+          <div class="p-6  bg-white rounded-lg shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] mb-6">
             <h3 class="text-title-color text-2xl mb-4">Have coupon?</h3>
             <!-- input Coupon -->
             <div class="relative flex">
               <input id="couponCode" value=""
-                class="max-w-[295px] flex-1 h-14 rounded-lg pl-4 border border-[1px_solid_rgba(17,17,17,0.15)] outline-btn-color"
+                class=" flex-1 h-14 rounded-lg pl-4 border border-[1px_solid_rgba(17,17,17,0.15)] outline-btn-color"
                 type="text" placeholder="Coupon code" />
               <button id="btnCouponApply"
-                class="btn btn-secondary normal-case h-14 bg-btn-color text-white text-xl font-semibold absolute right-0 lg:-right-1 xl:right-0">
+                class="btn btn-secondary normal-case h-14 bg-btn-color text-white text-xl font-semibold absolute right-0 ">
                 Apply
               </button>
             </div>
           </div>
 
           <!-- cart Items & priching -->
-          <div class="bg-white rounded-lg shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] mb-14">
-            <p class="text-xl lg:text-lg xl:text-xl font-semibold leading-loose text-title-color text-center pt-3">Cart Items</p>
+          <div class="bg-white rounded-lg shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] mb-20 sm:mb-0">
+            <p class="text-xl font-semibold leading-loose text-title-color text-center pt-3">Cart Items</p>
             <!-- Added cart items -->
-            <div id="cartItemListContainer" class="text-xl lg:text-lg xl:text-xl font-semibold leading-loose text-title-color pt-3 pl-8 lg:pl-5 xl:pl-6 space-y-2 max-h-[190px] overflow-auto ">
+            <div id="cartItemListContainer" class="text-xl font-semibold leading-relaxed text-title-color pt-2 px-6  space-y-1 max-h-[190px] overflow-auto ">
               <!-- <p>1. Home Cooker</p>
               <p>2. Home Cooker</p>
               <p>3. Home Cooker</p> -->
             </div>
             <hr class="my-2 border border-[1px_solid_rgba(17,17,17,0.5)] w-[90%] mx-auto" />
             <!-- Total Price discount price -->
-            <div class="pl-8 lg:pl-5 xl:pl-6 space-y-2">
-              <div class="text-xl lg:text-lg xl:text-xl  font-semibold leading-loose text-title-color">
+            <div class="px-6  space-y-2">
+              <div class="text-xl  font-semibold leading-relaxed text-title-color">
                 Total Price:
                 <span class="text-[rgba(17,17,17,0.5)]">
                   <span id="totalPrice">0.00</span> TK
                 </span>
               </div>
-              <div class="text-xl lg:text-lg xl:text-xl  font-semibold leading-loose text-title-color">
+              <div class="text-xl font-semibold leading-relaxed text-title-color">
                 Discount:
                 <span class="text-[rgba(17,17,17,0.5)]">
                   <span id="discountPrice">0.00</span> TK
                 </span>
               </div>
-              <div class="text-xl lg:text-lg xl:text-xl  font-semibold leading-loose text-title-color">
+              <div class="text-xl font-semibold leading-relaxed text-title-color">
                 To Pay:
                 <span class="text-[rgba(17,17,17,0.5)]">
                   <span id="finalTotal">0.00</span> TK
@@ -134,19 +134,19 @@
         </div>
 
         <!-- Product Item ShowCase section -->
-        <div class="lg:col-span-3">
+        <div class=" lg:col-span-2 xl:col-span-3">
           <!-- kitchen wear section -->
-          <div class="mb-14 px-5 lg:px-0">
-            <h1 class="text-title-color text-4xl font-semibold mb-5 md:mb-8 lg:hidden">
+          <div class="mb-14">
+            <h1 class="text-title-color max-w-[350px] mx-auto sm:mx-0 text-4xl font-semibold mb-5 md:mb-8 sm:hidden">
               Kitchenware
             </h1>
 
             <!--Kitchenware items -->
-            <div class="space-y-6 sm:space-y-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            <div class=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
 
               <!-- Kitchenware Item 1 -->
               <div onclick="cardItemClick(this)"
-                class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
+                class="bg-white rounded-lg max-w-[350px] mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
                 <figure class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
                   <img class="py-8 mx-auto" src="./images/kitchen_item1.png" alt="" />
                 </figure>
@@ -178,7 +178,7 @@
 
               <!-- Kitchenware Item 2 -->
               <div onclick="cardItemClick(this)"
-                class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
+                class="bg-white rounded-lg max-w-[350px] mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
                 <figure class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
                   <img class="py-8 mx-auto" src="./images/kitchen_item2.png" alt="" />
                 </figure>
@@ -210,7 +210,7 @@
 
               <!-- Kitchenware Item 3 -->
               <div onclick="cardItemClick(this)"
-                class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
+                class="bg-white rounded-lg max-w-[350px] mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
                 <figure class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
                   <img class="py-8 mx-auto" src="./images/kitchen_item3.png" alt="" />
                 </figure>
@@ -243,17 +243,17 @@
           </div>
 
           <!-- SportsWear Section -->
-          <div class="mb-14 px-5 lg:px-0">
-            <h1 class="text-title-color text-4xl font-semibold mb-5 md:mb-8">
+          <div class="mb-14">
+            <h1 class="text-title-color max-w-[350px] mx-auto sm:mx-0 text-4xl font-semibold mb-5 md:mb-8">
               SportsWear
             </h1>
 
             <!--SportsWear items -->
-            <div class="space-y-6 sm:space-y-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
 
               <!-- SportsWear Item 1 -->
               <div onclick="cardItemClick(this)"
-                class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
+                class="bg-white rounded-lg max-w-[350px] mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
                 <figure class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
                   <img class="py-10 mx-auto" src="./images/sports_item1.png" alt="" />
                 </figure>
@@ -285,7 +285,7 @@
 
               <!-- SportsWear Item 2 -->
               <div onclick="cardItemClick(this)"
-                class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
+                class="bg-white rounded-lg max-w-[350px] mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
                 <figure class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
                   <img class="py-8 mx-auto" src="./images/sports_item2.png" alt="" />
                 </figure>
@@ -317,7 +317,7 @@
 
               <!-- SportsWear Item 3 -->
               <div onclick="cardItemClick(this)"
-                class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
+                class="bg-white rounded-lg max-w-[350px] mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
                 <figure class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
                   <img class="py-8 mx-auto" src="./images/sports_item3.png" alt="" />
                 </figure>
@@ -350,16 +350,16 @@
           </div>
 
           <!-- Furniture section -->
-          <div class="mb-14 px-5 lg:px-0">
-            <h1 class="text-title-color text-4xl font-semibold mb-5 md:mb-8">
+          <div class="mb-14">
+            <h1 class="text-title-color max-w-[350px] mx-auto sm:mx-0 text-4xl font-semibold mb-5 md:mb-8">
               Furniture
             </h1>
             <!--Furniture items -->
-            <div class="space-y-6 sm:space-y-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            <div class=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
 
               <!-- Furniture Item 1 -->
               <div onclick="cardItemClick(this)"
-                class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
+                class="bg-white rounded-lg max-w-[350px] mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
                 <figure class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
                   <img class="py-8 mx-auto" src="./images/furniture_item1.png" alt="" />
                 </figure>
@@ -391,7 +391,7 @@
 
               <!-- Furniture Item 2 -->
               <div onclick="cardItemClick(this)"
-                class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
+                class="bg-white rounded-lg max-w-[350px] mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
                 <figure class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
                   <img class="py-8 mx-auto" src="./images/furniture_item2.png" alt="" />
                 </figure>
@@ -423,7 +423,7 @@
 
               <!-- Furniture Item 3 -->
               <div onclick="cardItemClick(this)"
-                class="bg-white rounded-lg mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
+                class="bg-white rounded-lg max-w-[350px] mx-auto w-full p-5 shadow-[0px_8px_60px_0px_rgba(0,0,0,0.1)] cursor-pointer hover:bg-[#fdf2f876]">
                 <figure class="bg-[rgba(17,17,17,0.05)] rounded-lg text-center">
                   <img class="py-8 mx-auto" src="./images/furniture_item3.png" alt="" />
                 </figure>

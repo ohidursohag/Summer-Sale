@@ -29,3 +29,11 @@ function clearValue(id) {
    getElement.innerText = '0.00';
 }
 
+// Add item on cart confirmation popup
+function confirmationPopup(id) {
+   var element = document.getElementById(id);
+   element.className = "show";
+
+   // After 3 seconds, remove the show class from DIV
+   setTimeout(function () { element.className = element.className.replace("show", ""); }, 500);
+}

@@ -14,6 +14,7 @@ function cardItemClick(target) {
    if (getTotal > 0) {
       bntPurchase.disabled = false; 
    }
+   confirmationPopup('addeditemPopup')
 }
 
 //Get and Apply discount
